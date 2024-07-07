@@ -45,20 +45,17 @@
         const homeTexture = createTextTexture('Home');
         const aboutMeTexture = createTextTexture('About Me');
         const myProjectsTexture = createTextTexture('My Projects');
-        const contactMeTexture = createTextTexture('Contact Me');
 
         const materials = [
             new THREE.MeshBasicMaterial({ map: homeTexture }),
             new THREE.MeshBasicMaterial({ map: aboutMeTexture }),
-            new THREE.MeshBasicMaterial({ map: myProjectsTexture }),
-            new THREE.MeshBasicMaterial({ map: contactMeTexture })
+            new THREE.MeshBasicMaterial({ map: myProjectsTexture })
         ];
 
         const geometry = new THREE.BoxGeometry();
         const cubes = materials.map(material => new THREE.Mesh(geometry, material));
         cubes[0].position.x = -2;
         cubes[2].position.x = 2;
-        cubes[3].position.x = 4;
 
         cubes.forEach(cube => scene.add(cube));
 
@@ -98,8 +95,6 @@
                         window.location.href = 'about.html';
                     } else if (firstIntersectedObject === cubes[2]) {
                         window.location.href = 'projects.html';
-                    } else if (firstIntersectedObject === cubes[3]) {
-                        window.location.href = 'contact.html';
                     }
                 }, 1000); 
             }
@@ -108,10 +103,7 @@
         window.addEventListener('click', onMouseClick, false);
     
         const hackingTextContent = "Initializing hack...\n> Accessing mainframe...\n> Bypassing security...\n> Hack successful!";
-        const additionalMessage = "\n\nHi, I am Aidan. It is a pleasure to meet you!\n\n" + 
-        "I am a student based in Sydney, focusing on all forms of technology - web development, data science, " + 
-        "cybersecurity, software development and design are all interests of mine!\n\n" +
-        "If at any time the spinning cubes are too much, press the 's' key and they will stop!";
+        const additionalMessage = "\n\nHi, I am Aidan. It is a pleasure to meet you!\n\nIf at any time the spinning cubes are too much, press the 's' key and they will stop!";
         let currentCharIndex = 0;
         let currentMessage = hackingTextContent;
     
