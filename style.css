@@ -1,99 +1,88 @@
-body, h1, h2, p, a {
-    margin: 0;
+/* Adjusting font size - small device */
+.hackingText, .additionalMessage {
+    font-size: 14px; 
+}
+
+/* Adjusting font size - medium device e.g. iPads */
+@media (min-width: 768px) {
+    .hackingText, .additionalMessage {
+        font-size: 18px; /* Adjust as needed */
+    }
+}
+
+/* Adjusting font size - large device e.g. laptop and desktop */
+@media (min-width: 992px) {
+    .hackingText {
+        font-size: 22px; 
+    }
+    .additionalMessage {
+        font-size: 20px; 
+    }
+}
+
+/* Background color */
+body {
+    background-color: black;
+    transition: padding-right 0.5s;
+}
+
+
+@media (min-width: 768px) {
+    .side-menu {
+        right: 0; 
+    }
+
+    body {
+        padding-right: 250px; 
+    }
+}
+
+ul li {
+    list-style-position: inside; /* Ensures the bullet points are inside the list item's box */
+}
+
+ul li a {
+    display: inline-block; /* Keeps links inline but allows for padding and margin adjustments if needed */
+    vertical-align: top; /* Aligns the link with the top of the list item, useful if the link wraps to a new line */
+    margin: 0; /* Adjust as needed */
+    padding: 0; /* Adjust as needed */
+}
+
+.side-menu {
+    position: fixed;
+    top: 0;
+    right: 0px; 
+    width: 50px;
+    height: 100%;
+    background-color: gray;
+    padding: 20px;
+    transition: right 0.5s; 
+}
+
+.side-menu ul {
+    list-style-type: none;
     padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.side-menu ul li {
+    padding: 10px 0;
+}
+.side-menu ul li a {
+    color: white;
+    text-decoration: none;
 }
 
 body {
-    background-color: #fff;
-    color: #000;
-    line-height: 1.6;
-    padding: 20px;
+    padding-right: 270px; 
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
+
+
+.side-menu img {
+    width: 50px; /* Adjust based on your preference */
+    height: auto;
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-main {
-    padding: 20px 0;
-    margin-top: 20px;
-}
-
-h1, h2 {
-    margin-bottom: 20px;
-}
-
-p {
-    margin-bottom: 10px;
-}
-
-#contact {
-    background-color: #e0e0e0;
-    text-align: center;
-    padding: 20px;
-    margin-top: 20px;
-}
-
-#contact a {
-    color: #000;
-}
-
-#contact img {
-    filter: grayscale(100%);
-}
-
-a:hover {
-    color: #606060;
-}
-
-body, html {
-    margin: 0;
-    padding: 0;
-    overflow: hidden; 
-}
-
-@keyframes fadeOut {
-    from { opacity: 1; }
-    to { opacity: 0; }
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-.fade-out {
-    animation: fadeOut 1s forwards;
-}
-
-.fade-in {
-    animation: fadeIn 1s forwards;
-}
-
-#cube-container {
-    width: 100px;
-    height: 100px;
-}
-#linkedin-link {
-    text-align: right;
+.side-menu a:hover img {
+    transform: scale(1.1); /* Slightly enlarge the image on hover */
 }

@@ -2,21 +2,35 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width">
     <title>About Me | Aidan</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Me</a></li>
-                <li><a href="projects.html">Projects</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
+<body class="fade-in">
+    <!--Defines the side menu - picture, hover title, and what page it links to when clicking it-->
+    <div class="side-menu">
+        <ul>
+            <li><a href="index.html" title="Home"><img src="images/home.png" alt="Home"></a></li>
+            <li><a href="about.html" title="About Me"><img src="images/about.png" alt="About Me"></a></li>
+            <li><a href="projects.html" title="My Projects"><img src="images/projects.png" alt="My Projects"></a></li>
+        </ul>
+        <br>
+        <br>
+        <ul>
+            <li>
+                <a href="https://www.linkedin.com/in/aidan-robinson-102439264" title="LinkedIn" target="_blank">
+                    <img src="images/linkedin.png" alt="LinkedIn">
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/aidannnnnnnn" title="GitHub" target="_blank">
+                    <img src="images/github.png" alt="GitHub">
+                </a>
+            </li>
+        </ul>
+    </div>
+    
+    <main id="about" style="color: lime; font-family: 'Courier New', monospace; white-space: pre-wrap; position: absolute; top: 20px; left: 20px; max-width: 90%;">
         <h1>About Me</h1>
         <p>Hi, I am Aidan, a third year Bachelor of Advanced Computing student based in Sydney, studying at the University of Sydney, majoring in Cybersecurity and Data Science. Within my degree, I have strategically focused my coursework in the following areas:</p>
         <ul>
@@ -30,11 +44,6 @@
         <p>Alongside the above, I am always interested in continuous professional development - learning, applying and utilising new skills to become a more complete person and improve my brand.</p>
         <p>I have a keen interest in numerous hobbies, such as playing and watching sports (notably cricket, basketball, football and tennis), cooking and trying food from different cultures and understanding our economy through a range of diverse perspectives.</p>
     </main>
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <a href="www.linkedin.com/in/aidan-robinson-102439264" target="_blank">
-            <img src="images/linkedin.png" alt="LinkedIn" style="width: 40px; height: 40px;">
-        </a>
-    </section>
 </body>
 </html>
+    
