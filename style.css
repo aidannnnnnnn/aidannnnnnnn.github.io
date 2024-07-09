@@ -26,27 +26,7 @@ body {
     transition: padding-right 0.5s;
 }
 
-
-@media (min-width: 768px) {
-    .side-menu {
-        right: 0; 
-    }
-
-    body {
-        padding-right: 250px; 
-    }
-}
-
-ul li {
-    list-style-position: inside; /* Ensures the bullet points are inside the list item's box */
-}
-
-ul li a {
-    display: inline-block; /* Keeps links inline but allows for padding and margin adjustments if needed */
-    vertical-align: top; /* Aligns the link with the top of the list item, useful if the link wraps to a new line */
-    margin: 0; /* Adjust as needed */
-    padding: 0; /* Adjust as needed */
-}
+/* Side menu styling */
 
 .side-menu {
     position: fixed;
@@ -66,23 +46,35 @@ ul li a {
 .side-menu ul li {
     padding: 10px 0;
 }
-.side-menu ul li a {
-    color: white;
-    text-decoration: none;
-}
-
-body {
-    padding-right: 270px; 
-}
-
-
 
 .side-menu img {
-    width: 50px; /* Adjust based on your preference */
+    width: 50px; 
     height: auto;
-    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+    transition: transform 0.3s ease; 
 }
 
 .side-menu a:hover img {
-    transform: scale(1.1); /* Slightly enlarge the image on hover */
+    transform: scale(1.1); 
+}
+
+/*set color and font for generic text for all three files*/
+
+#about, #projects, #hackingText {
+    color: lime;
+    font-family: 'Courier New', monospace;
+    white-space: pre-wrap;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    max-width: 90%;
+}
+
+/* Sets the link color to lime */
+#projects a {
+    color: lime; 
+}
+
+/* Changes the link color to white on hover */
+#projects a:hover {
+    color: white; 
 }
