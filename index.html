@@ -51,12 +51,12 @@
                 span.className = isHackingText ? 'hackingText' : 'additionalMessage';
                 document.getElementById('hackingText').appendChild(span);
                 currentCharIndex++;
-                setTimeout(displayHackingText, 100); 
+                setTimeout(displayHackingText, 25); 
             } else if (currentMessage === hackingTextContent) {
                 currentMessage = additionalMessage;
                 currentCharIndex = 0; 
                 isHackingText = false;
-                setTimeout(displayHackingText, 500); 
+                setTimeout(displayHackingText, 125); 
             } 
         }
         displayHackingText();    

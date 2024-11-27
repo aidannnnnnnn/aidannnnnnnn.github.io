@@ -10,6 +10,22 @@
     }
 }
 
+/* Adjust padding for text elements when screen height is smaller */
+@media (max-height: 600px) {
+    #about, #projects, #hackingText {
+        margin-top: 50px; 
+    }
+}
+
+/* Ensure side-menu does not overlap text elements */
+.side-menu {
+    z-index: 1; 
+}
+
+#about, #projects, #hackingText {
+    z-index: 0; 
+}
+
 /* Adjusting font size - large device e.g. laptop and desktop */
 @media (min-width: 992px) {
     .hackingText {
